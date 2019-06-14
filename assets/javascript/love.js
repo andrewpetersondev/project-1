@@ -5,7 +5,7 @@ $("#love").on("click", function (event) {
 event.preventDefault();
 
 console.log('clicked');
-
+ 
 var proxy = "https://cors-anywhere.herokuapp.com/";
 
     var queryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=John&sname=Alice";
