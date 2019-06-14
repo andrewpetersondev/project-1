@@ -2,80 +2,81 @@
 <html lang="en">
 
 <head>
+    <!-- meta -->
     <meta charset="utf-8">
-    <title>Strains</title>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
-        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- title -->
+    <title>Project 1</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/style/styleMarta.css">
 </head>
-<style>
-</style>
 
 <body>
-    <!-- test button -->
-    <button id="love">love</button>
+    <div id="results">
+        <p></p>
+    </div>
+    <div class="container-marta">
+        <div class="jumbotron text-center">
+            <h1>strain match</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input id="username" type="text" class="form-control text-center" placeholder="Your Name">
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="./assets/images/heart.gif" alt="hearticon" id="heartImg">
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" id="strain-name" class="form-control text-center" placeholder="Strain Name">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button class="btn btn-danger btn-lg btn-block" id="calculateBtn">Calculate Match</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-index">
+        <!-- test love button-->
+        <button id="love">love</button>
+        <!-- test strains button -->
+        <button id="strains">strains</button>
+        <!-- <h3>Strains Table</h3> -->
+        <!-- <table class="table">
+            <thead>
+                <tr> -->
+        <!-- The scope attribute specifies that this is a header for a column -->
+        <!-- <th scope="col">Name</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Race</th>
+                    <th scope="col">Flavors</th>
+                    <th scope="col">Positive</th>
+                    <th scope="col">Negative</th>
+                    <th scope="col">Medical</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table> -->
+    </div>
 
-    <!-- <div class="container"> -->
-    <h3>Strains Table</h3>
-    <table class="table">
-        <thead>
-            <tr>
-                <!-- The scope attribute specifies that this is a header for a column -->
-                <th scope="col">Name</th>
-                <th scope="col">ID</th>
-                <th scope="col">Race</th>
-                <th scope="col">Flavors</th>
-                <th scope="col">Positive</th>
-                <th scope="col">Negative</th>
-                <th scope="col">Medical</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <!-- </div> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        // The below code fills in the first row of the table 
-        var queryURL = "http://strainapi.evanbusse.com/cpTeJEf/strains/search/all";
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function (response) {
-            // console.log(response)
-
-            for (key in response) {
-
-                // console.log("loop: ", response[key])
-
-                // Methods run on jQuery selectors return the selector they we run on
-                // This is why we can create and save a reference to a td in the same statement we update its text
-
-                var tr = $("<tr>");
-                var name = $("<td scope='col'>").text(key);
-                var id = $("<td scope='col'>").text(response[key].id);
-                var race = $("<td scope='col'>").text(response[key].race);
-                var flavors = $("<td scope='col'>").text(response[key].flavors);
-                var effectsPos = $("<td scope='col'>").text(response[key].effects.positive);
-                var effectsNeg = $("<td scope='col'>").text(response[key].effects.negative);
-                var effectsMed = $("<td scope='col'>").text(response[key].effects.medical);
-
-                // // Append the newly created table data to the table row
-
-                tr.append(name)
-                tr.append(id)
-                tr.append(race)
-                tr.append(flavors)
-                tr.append(effectsPos)
-                tr.append(effectsNeg)
-                tr.append(effectsMed)
-
-                // Append the table row to the table body
-                $("tbody").append(tr);
-            }
-        })
-    </script>
-    <script src="./javascript/love.js"></script>
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- strains logic -->
+    <script src="./assets/javascript/strainslogic.js"></script>
+    <!-- love logic -->
+    <script src="./assets/javascript/lovecalculator.js"></script>
+    <!-- main app logic -->
+    <script src="./assets/javascript/application.js"></script>
 </body>
 
 
