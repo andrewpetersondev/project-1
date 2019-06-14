@@ -1,41 +1,4 @@
-// api key : m7th4nl
 
-// click button and receive data from api
-// $("#strain-api-test").on("click", function () {
-
-//     var queryURL = "https://strainapi.evanbusse.com/m7th4nl";
-
-//     $.ajax({
-
-//         url: queryURL,
-//         method: "GET"
-
-//     }).then(function (response) {
-
-//         console.log(response);
-
-//     })
-
-// });
-
-// $("#strain-api-parameter-test").on("click", function () {
-
-//     var allStrains = "strains/search/all";
-
-//     var queryURL = "https://strainapi.evanbusse.com/m7th4nl/" + allStrains;
-
-//     console.log(queryURL);
-
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).then(function (response) {
-//         console.log(response);
-//     })
-
-// });
-
-//everything above this line is the original app.js -- code below line are emma's updates from 6/13/19 9pm
 
 // The below code fills in the first row of the table 
 var queryURL = "http://strainapi.evanbusse.com/cpTeJEf/strains/search/all";
@@ -77,7 +40,7 @@ $.ajax({
                 // tr.append(effectsMed)
 
                 // Append the table row to the table body
-                $("tbody").append(tr);
+                $("tbody").append(tr);   
             }
 
         }
