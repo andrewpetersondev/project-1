@@ -7,7 +7,7 @@ $.ajax({
     method: "GET"
 }).then(function (response) {
     // console.log(response)
-
+ 
     for (var i = 0; i < 6; i++) {
         var strainID = Math.ceil(Math.random() * 2161) + 1;
 
