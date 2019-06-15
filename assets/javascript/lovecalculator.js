@@ -17,8 +17,8 @@ var sname;
 // ==========================================================================
 
 function calculateMatch() {
-    username = $("#username").val().trim();
-    strainName = $("#strain-name").val().trim();
+    username = $("#yourNameInput").val().trim();
+    strainName = $("#strainInput").val().trim();
     var proxy = "https://cors-anywhere.herokuapp.com/";
     var queryURL = `https://love-calculator.p.rapidapi.com/getPercentage?fname=${username}&sname=${strainName}`;
     console.log(queryURL);
