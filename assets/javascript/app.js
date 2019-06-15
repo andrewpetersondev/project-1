@@ -11,7 +11,7 @@ $.ajax({
     console.log(response);
     console.log(Object.keys(response).length);
 
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 5; i++) {
 
         var strainID = Math.ceil(Math.random() * Object.keys(response).length) + 1;
 
@@ -23,6 +23,8 @@ $.ajax({
             // This is why we can create and save a reference to a td in the same statement we update its text
 
             var tr = $("<tr>");
+            tr.addClass("strain-row");
+            tr.attr("name", key);
             var name = $("<td scope='col'>").text(key);
             var id = $("<td scope='col'>").text(response[key].id);
             var race = $("<td scope='col'>").text(response[key].race);

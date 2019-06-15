@@ -33,8 +33,6 @@ function calculateMatch() {
 }
 
 
-
-
 // main process
 // ==========================================================================
 
@@ -56,9 +54,21 @@ function calculateMatch() {
 // click calculate match
 $("#calculateBtn").on("click", function (event) {
     event.preventDefault();
-    console.log('clicked');
+    console.log('clicked calculate');
     calculateMatch();
 });
+
+// click a strain row to populate strain input
+$(document).on("click", ".strain-row", function () {
+    event.preventDefault();
+    console.log("clicked row");
+    var strainSelected = $(this).attr("name");
+    console.log(strainSelected);
+    $("#strainInput").val(strainSelected);
+
+});
+
+
 
 
 // psuedocode
