@@ -6,10 +6,14 @@ $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function (response) {
-    // console.log(response)
+    
+    // testing / debugging
+    console.log(response);
+    console.log(Object.keys(response).length);
 
     for (var i = 0; i < 6; i++) {
-        var strainID = Math.ceil(Math.random() * 2161) + 1;
+
+        var strainID = Math.ceil(Math.random() * Object.keys(response).length) + 1;
 
         for (key in response) {
 
@@ -28,16 +32,16 @@ $.ajax({
             // var effectsMed = $("<td scope='col'>").text(response[key].effects.medical);
 
 
-            console.log("Strain ID: " + strainID);
+            console.log(strainID);
 
             if (response[key].id === strainID) {
-                tr.append(name)
+                tr.append(name);
                 // tr.append(id)
-                tr.append(race)
-                tr.append(flavors)
-                tr.append(effectsPos)
-                // tr.append(effectsNeg)
-                // tr.append(effectsMed)
+                tr.append(race);
+                tr.append(flavors);
+                tr.append(effectsPos);
+                // tr.append(effectsNeg);
+                // tr.append(effectsMed);
 
                 // Append the table row to the table body
                 $("tbody").append(tr);   
