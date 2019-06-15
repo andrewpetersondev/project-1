@@ -1,12 +1,13 @@
 .parallax-container {
-    height: 200px;
+    height: 300px;
   }
 
 h1 {
     color: white;
     font-size: 90px;
     font-family: Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-weight: 600;
+    font-family: 'Comfortaa', cursive;
 }
 
 #heartImg {
@@ -20,6 +21,19 @@ h1 {
     height: 50px;
     width: 300px;
     background:#E62C3D;
-    margin: 0 auto;
+}
+
+#resetBtn {
+    background:#E62C3D;
+}
+
+#resultText {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#footerImg {
+    height: 300px;
+    background-color: black;
 }
 
