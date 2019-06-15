@@ -1,12 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/styleMarta.css">
+    <title>Best Buds</title>
 </head>
+
 <body>
-     
+    <div class="parallax-container">
+        <div class="section">
+            <div class="container">
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col s12 l8 offset-l2">
+                        <h1 class="header center">best buds</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="assets/images/jumbobg4.png"></div>
+    </div>
+
+    <div id="section" class="section white">
+        <div class="row container">
+            <div id="inputCard" class="row container center">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="col s12 l5">
+                                <input type="text" class="form-control text-center" placeholder="Your Name"
+                                    id="yourNameInput">
+                            </div>
+                            <div class="col s12 l2">
+                                <img src="assets/images/heart.gif" alt="hearticon" id="heartImg">
+                            </div>
+                            <div class="col s12 l5">
+                                <input type="text" class="form-control text-center" placeholder="Strain Name"
+                                    id="strainInput">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row center">
+                <div class="col s12">
+                    <button class="waves-effect waves-light btn" id="calculateBtn" onclick="hideInput()">calculate
+                        match</button>
+                </div>
+            </div>
+
+            <!-- can we do an on click event to hide the inputCard once calculate button is clicked -->
+            <!-- is it possible to also highlight the selected option when the user clicks table to populate the strain name? -->
+
+            <div id="resultCard" class="row container center">
+                <div class="col s12 l8 offset-l2">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="assets/images/yay.gif" alt="cardimage">
+                        </div>
+                        <div class="card-content">
+                            <!-- we need to get the "resultText" to link up with the lovecalculator.js file so response is dynamic -->
+                            <p id="resultText">Congrats! You are a 98% match!</p>
+                            <a class="waves-effect waves-light btn" id="resetBtn">try again!</a>
+                            <!-- can we do an on click event to hide the resultCard and bring back the inputCard once reset button is clicked -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="highlight centered responsive-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Race</th>
+                        <th>Flavors</th>
+                        <th>Positive Effects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax" id="footerImg"></div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
+
+        // function hideInput() {
+        //     var x = document.getElementById("inputCard");
+        //     if (x.style.display === "none") {
+        //         x.style.display = "block";
+        //     } else {
+        //         x.style.display = "none";
+        //     }
+        // }
+
+        $("#resultCard").hide();
+        $("#calculateBtn").click(function () {
+            $("#resultCard").show();
+        });
+
+
+    </script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/lovecalculator.js"></script>
 </body>
+
 </html>
