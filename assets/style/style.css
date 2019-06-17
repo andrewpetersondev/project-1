@@ -37,3 +37,15 @@ h1 {
     background-color: black;
 }
 
+#infoIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background: #2C8506;
+}
+
+.modal-close {
+    background: #2C8506;
+}
+
+

@@ -1,5 +1,3 @@
-
-
 // The below code fills in the first row of the table 
 var queryURL = "http://strainapi.evanbusse.com/cpTeJEf/strains/search/all";
 $.ajax({
@@ -52,3 +50,4 @@ $.ajax({
         }
     }
 })
+
