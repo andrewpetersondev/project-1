@@ -30,8 +30,16 @@ function calculateMatch() {
         var messageResponse = response.result;
 
         // display results to html
+        $("#namesDisplay").text(username + " and " + strainName + " are a");
         $("#percentMatch").text(percentMatch);
         $("#resultText").text(messageResponse);
+
+        if (parseInt(percentMatch) > 50) {
+            $("#cardImage").attr("src", "./assets/images/yay.gif");
+        }
+        else {
+            $("#cardImage").attr("src", "./assets/images/yikes.gif");
+        }
 
         // testing and debugging
         console.log(response);
@@ -66,6 +74,9 @@ $("#calculateBtn").on("click", function (event) {
     event.preventDefault();
     console.log('clicked calculate');
     calculateMatch();
+    $("#resultCard").show();
+    $("#inputs").hide();
+    $("#calculateBtn").hide();
 
 });
 
@@ -82,6 +93,9 @@ $(document).on("click", ".strain-row", function () {
 $(document).on("click", "#resetBtn", function () {
     $("#yourNameInput").val("");
     $("#strainInput").val("");
+    $("#resultCard").hide();
+    $("#inputs").show();
+    $("#calculateBtn").show();
 
 })
 
