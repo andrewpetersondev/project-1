@@ -2,88 +2,131 @@
 <html lang="en">
 
 <head>
-    <!-- meta -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- title -->
-    <title>Project 1</title>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- custom css -->
-    <link rel="stylesheet" href="./assets/style/styleMarta.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/style.css">
+
+    <title>Best Buds</title>
 </head>
 
 <body>
-<<<<<<< HEAD
-    <!-- test button -->
-    <button id="love">love.....</button>
-=======
-    <div id="results">
-        <p></p>
-    </div>
-    <div class="container-marta">
-        <div class="jumbotron text-center">
-            <h1>strain match</h1>
+    <div class="parallax-container">
+        <div class="section">
+            <div class="container">
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col s12 l8 offset-l2">
+                        <h1 class="header center">best buds</h1>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container">
+        <div class="parallax"><img src="assets/images/jumbobg4.png"></div>
+    </div>
+
+    <div id="section" class="section white">
+        <div class="row container">
             <div class="row">
-                <form class="col-sm-12">
+                <form class="col s12">
                     <div class="row">
-                        <div class="col-sm-5">
-                            <input id="username" type="text" class="form-control text-center" placeholder="Your Name">
+                        <div class="col s12 l5">
+                            <input type="text" class="form-control center" placeholder="Your Name"
+                                id="yourNameInput">
                         </div>
-                        <div class="col-sm-2">
-                            <img src="./assets/images/heart.gif" alt="hearticon" id="heartImg">
+                        <div class="col s12 l2">
+                            <img src="assets/images/heart.gif" alt="hearticon" id="heartImg">
                         </div>
-                        <div class="col-sm-5">
-                            <input type="text" id="strain-name" class="form-control text-center" placeholder="Strain Name">
+                        <div class="col s12 l5">
+                            <input type="text" class="form-control center" placeholder="Strain Name"
+                                id="strainInput">
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <button class="btn btn-danger btn-lg btn-block" id="calculateBtn">Calculate Match</button>
+
+            <div class="row center">
+                <div class="col s12">
+                    <button class="waves-effect waves-light btn" id="calculateBtn">calculate match</button>
                 </div>
             </div>
+
+            <div id="resultCard" class="row container center">
+                <div class="col s12 l8 offset-l2">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="assets/images/yay.gif" alt="cardimage">
+                        </div>
+                        <div class="card-content">
+                            <p id="resultText">Congrats! You are a 98% match!</p>
+                            <a class="waves-effect waves-light btn" id="resetBtn">try again!</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="highlight centered responsive-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Race</th>
+                        <th>Flavors</th>
+                        <th>Positive Effects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </div>
-    <div class="container-index">
-        <!-- test love button-->
-        <button id="love">love</button>
-        <!-- test strains button -->
-        <button id="strains">strains</button>
-        <!-- <h3>Strains Table</h3> -->
-        <!-- <table class="table">
-            <thead>
-                <tr> -->
-        <!-- The scope attribute specifies that this is a header for a column -->
-        <!-- <th scope="col">Name</th>
-                    <th scope="col">ID</th>
-                    <th scope="col">Race</th>
-                    <th scope="col">Flavors</th>
-                    <th scope="col">Positive</th>
-                    <th scope="col">Negative</th>
-                    <th scope="col">Medical</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table> -->
+
+    <a class="btn-floating btn-large waves-effect waves-light modal-trigger" id="infoIcon" href="#infoModal"><i class="material-icons">info_outline</i></a>
+
+    <!-- Modal Structure -->
+
+    <div id="infoModal" class="modal">
+
+        <div class="modal-content center">
+
+            <h4>How to find your Best Bud</h4>
+
+            <p>In this table you will find a chart of a few random strains of bud.</p>
+            <p>Input your name, click a strain name and see if it’s meant to be!</p>  
+            <p>Refresh the page for new set of buds</p>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <a href="#!" class="modal-action modal-close waves-effect waves-light btn green">Close</a>
+
+        </div>
+
     </div>
->>>>>>> e89462cbc6144b4000d0b1d4f676ed14d29ca406
 
-    <!-- jQuery Library -->
+    <div class="parallax-container">
+        <div class="parallax" id="footerImg"></div>
+    </div>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- strains logic -->
-    <script src="./assets/javascript/strainslogic.js"></script>
-    <!-- love logic -->
-    <script src="./assets/javascript/lovecalculator.js"></script>
-    <!-- main app logic -->
-    <script src="./assets/javascript/application.js"></script>
-    <script src="./assets/javascript/app.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        $('.modal').modal();
+        $('.parallax').parallax();
+        })
 
+        $("#resultCard").hide();
+    </script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/lovecalculator.js"></script>
+
+
+</body>
 
 </html>
