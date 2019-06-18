@@ -10,9 +10,6 @@ var sname;
 
 
 
-
-
-
 // functions
 // ==========================================================================
 
@@ -27,10 +24,23 @@ function calculateMatch() {
         headers: { "X-RapidAPI-Key": "765b72b611msh83e1deab1282842p15aaf5jsn577be8027784", "X-RapidAPI-Host": "love-calculator.p.rapidapi.com" },
         method: "GET"
     }).then(function (response) {
+
+        // store desired response in variables
+        var percentMatch = response.percentage;
+        var messageResponse = response.result;
+
+        // display results to html
+        $("#percentMatch").text(percentMatch);
+        $("#resultText").text(messageResponse);
+
+        // testing and debugging
         console.log(response);
-        // $("#results").html()
+        console.log(percentMatch);
+        console.log(messageResponse);
+
     });
 }
+
 
 
 // main process
@@ -56,6 +66,7 @@ $("#calculateBtn").on("click", function (event) {
     event.preventDefault();
     console.log('clicked calculate');
     calculateMatch();
+
 });
 
 // click a strain row to populate strain input
@@ -68,12 +79,11 @@ $(document).on("click", ".strain-row", function () {
 
 });
 
+$(document).on("click", "#resetBtn", function () {
+    $("#yourNameInput").val("");
+    $("#strainInput").val("");
+
+})
 
 
 
-// psuedocode
-// ==========================================================================
-// 1. get the user name and store it in a variable
-// 2. get the strain name and store it in a variable
-// 3. insert username where fname is and strain name where sname is in query url
-// 4. display results when calculate match is clicked
