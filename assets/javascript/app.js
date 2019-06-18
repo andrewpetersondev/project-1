@@ -1,4 +1,6 @@
 // The below code fills in the first row of the table 
+// var proxy = "https://cors-anywhere.herokuapp.com/";
+
 var queryURL = "http://strainapi.evanbusse.com/cpTeJEf/strains/search/all";
 $.ajax({
     url: queryURL,
