@@ -25,10 +25,16 @@ h1 {
 
 #resetBtn {
     background:#E62C3D;
+    margin-top: 10px;
+}
+
+#displayPercentMatch {
+    font-size: 24px; 
+    color: #E62C3D;
 }
 
 #resultText {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
