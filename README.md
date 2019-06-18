@@ -8,7 +8,7 @@ This repository is a group project for our coding boot camp. This is our first g
 
 - html
 - css
-- semantic ui
+- materialize
 - javascript
 - jquery
 - strains api
