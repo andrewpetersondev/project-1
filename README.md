@@ -8,7 +8,7 @@ This repository is a group project for our coding boot camp. This is our first g
 
 - html
 - css
-- semantic ui
+- materialize ui
 - javascript
 - jquery
 - strains api
@@ -95,3 +95,25 @@ total number of strains = 2162
 }
 
 ```
+
+## Motivation
+
+- Illinois approved recreational marijuana for January 1, 2020
+
+- There are so many strains and we want to make them more familiar
+
+## The Design Process
+
+- User enters his/her name
+
+-A list of randomly selected strain will be pre-populated into Strain Name field, along with Race, Flavors, Positive Effects
+
+-When both name fields have been entered, user clicks Calculate Match button.
+
+- Results will display compatibility
+
+## Possible Future Updates
+
+- Find API for government authorities (fed, state, local) with business licenses to find marijuana related businesses. From there filter down for commercial sales/recreational, medical dispensaries, growing operations, etc
+
+- Recommend pairings based on chose strain/results from questionnaire or photo recognition

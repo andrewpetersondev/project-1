@@ -1,8 +1,6 @@
 // global variables
 // ==========================================================================
-var apiParameters = {
-
-}
+// var apiParameters = {}
 
 
 
