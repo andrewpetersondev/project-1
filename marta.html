@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style/styleMarta.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+
     <title>Best Buds</title>
 </head>
 
@@ -33,13 +35,15 @@
                 <form class="col s12">
                     <div class="row">
                         <div class="col s12 l5">
-                            <input type="text" class="form-control text-center" placeholder="Your Name" id="yourNameInput">
+                            <input type="text" class="form-control center" placeholder="Your Name"
+                                id="yourNameInput">
                         </div>
                         <div class="col s12 l2">
                             <img src="assets/images/heart.gif" alt="hearticon" id="heartImg">
                         </div>
                         <div class="col s12 l5">
-                            <input type="text" class="form-control text-center" placeholder="Strain Name" id="strainInput">
+                            <input type="text" class="form-control center" placeholder="Strain Name"
+                                id="strainInput">
                         </div>
                     </div>
                 </form>
@@ -81,6 +85,30 @@
         </div>
     </div>
 
+    <a class="btn-floating btn-large waves-effect waves-light modal-trigger" id="infoIcon" href="#infoModal"><i class="material-icons">info_outline</i></a>
+
+    <!-- Modal Structure -->
+
+    <div id="infoModal" class="modal">
+
+        <div class="modal-content center">
+
+            <h4>How to find your Best Bud</h4>
+
+            <p>In this table you will find a chart of a few random strains of bud.</p>
+            <p>Input your name, click a strain name and see if it’s meant to be!</p>  
+            <p>Refresh the page for new set of buds</p>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <a href="#!" class="modal-action modal-close waves-effect waves-light btn green">Close</a>
+
+        </div>
+
+    </div>
+
     <div class="parallax-container">
         <div class="parallax" id="footerImg"></div>
     </div>
@@ -89,13 +117,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.parallax').parallax();
-        });
+        $('.modal').modal();
+        $('.parallax').parallax();
+        })
 
         $("#resultCard").hide();
     </script>
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/lovecalculator.js"></script>
+
+
 </body>
 
 </html>
