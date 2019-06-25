@@ -1,5 +1,9 @@
 # project-1
 
+## Take a look
+
+**[Best Buds](https://andrewpetersondev.github.io/project-1/)**
+
 ## Overview
 
 This repository is a group project for our coding boot camp. This is our first group project so the main purpose of this project is using github, slack, and other project management tools. We are combining two apis for a unique user experience.
